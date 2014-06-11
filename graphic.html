@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Graphic</title>
+  <script type="text/javascript" src="graphic.js"></script>
+</head>
+<body>
+
+<div id="canvas">
+<canvas id="myCanvas" width="200" height="240" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+
+<div>
+
+<button id="mainButton" class="finish" onclick="finishOrStart()">Finish Fast</button>
+<br><button id="drawLine" class='hide' style='display:none' onclick="drawOneLine()">Draw One More Line</button>
+
+</div>
+
+<script>
+
+var myVar;
+var c = document.getElementById("myCanvas");
+var b = document.getElementById("mainButton");
+var d = document.getElementById("drawLine");
+var ctx = c.getContext("2d");
+
+var centerX = 100;
+var centerY = 100;
+var radius = 90;
+var interval;
+
+var aInc;
+
+var nIter;
+var alpha = 0;
+getNew();
+draw();
+
+</script>
+</body>
+</html>
